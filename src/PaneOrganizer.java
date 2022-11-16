@@ -5,8 +5,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 
 public class PaneOrganizer {
@@ -14,15 +12,6 @@ public class PaneOrganizer {
 
     public PaneOrganizer() {
         this.root = new BorderPane();
-        Pane pane = new Pane();
-        Circle circle = new Circle(50);
-        Rectangle rectangle = new Rectangle(50, 80);
-        circle.setCenterX(100);
-        circle.setCenterY(100);
-        rectangle.setX(100);
-        rectangle.setY(100);
-        // pane.getChildren().addAll(circle, rectangle);
-        this.root.setCenter(pane);
         this.root.setBottom(createButtonPane());
         this.root.setTop(createLabelPane());
         this.root.setStyle("-fx-background-color: #e4cbff");
